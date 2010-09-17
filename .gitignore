@@ -1,0 +1,19 @@
+.ignore/
+!.gitignore
+
+# Ignore all folders containing PNGs in sizes other than the default (64x64)
+belts/*/16
+belts/*/24
+belts/*/32
+belts/*/48
+!belts/*/64
+belts/*/96
+belts/*/128
+belts/*/192
+belts/*/256
+belts/*/384
+belts/*/512
+belts/*/768
+belts/*/1024
+belts/*/1536
+belts/*/2048
