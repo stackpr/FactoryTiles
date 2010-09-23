@@ -1,2 +1,2 @@
 all:
-	cd ./belt/ && make && cd ..
+	cd ./abyss/ && make && cd ..

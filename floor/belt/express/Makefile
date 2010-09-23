@@ -1,4 +1,4 @@
-sources := left forward right \
+sources := left forward right leftRight \
 	leftForward leftForwardRight forwardRight
 
 all: .64

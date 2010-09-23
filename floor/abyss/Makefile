@@ -1,5 +1,7 @@
-sources := left forward right leftRight \
-	leftForward leftForwardRight forwardRight
+sources := single abyss \
+	arris0001 arris0010 arris0011 arris0100 arris0101 arris0110 arris0111 \
+	arris1000 arris1001 arris1010 arris1011 arris1100 arris1101 arris1110 arris1111 \
+	bay edge nook
 
 all: .64
 
