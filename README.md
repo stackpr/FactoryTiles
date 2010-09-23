@@ -6,7 +6,7 @@ Complete means that all possible situations can be displayed with these graphics
 Minimal means that there are no graphics not needed to display the original game.
 
 If you want RoboRally®, include FactoryTiles. If you want zombies, fork FactoryTiles.
-This also means, your graphicsengine needs to support of semi-transparency and rotation.
+This also means, your graphicsengine needs to support semi-transparency and rotation.
 
 Paradigms
 =========
@@ -68,18 +68,56 @@ floor, checkpoint, slide, laser, wall, laser emitter, robot, press
 Status
 ======
 
-* Make framework - done
-* robot - todo
-* floor
- * abyss - todo
- * belt - done
- * repair - todo
- * turntable -todo
-* module - todo
-* property
- * checkpoint - todo
- * laser - todo
- * laser emitter - todo
- * press - todo
- * slide - todo
- * wall - todo
+<table>
+    <thead>
+        <tr>
+            <td>Component</td> <td>Status</td> <td>Size</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>make framework</td> <td>done</td> <td></td>
+        </tr>
+        <tr>
+            <td>robot</td> <td>todo</td> <td>8 graphics</td>
+        </tr>
+        <tr>
+            <td>floor/abyss</td> <td>done</td> <td>20 graphics</td>
+        </tr>
+        <tr>
+            <td>floor/belt</td> <td>done</td> <td>14 graphics</td>
+        </tr>
+        <tr>
+            <td>floor/repair</td> <td>todo</td> <td>2 graphics</td>
+        </tr>
+        <tr>
+            <td>floor/turntable</td> <td>todo</td> <td>2 graphics</td>
+        </tr>
+        <tr>
+            <td>module</td> <td>todo</td> <td>9 graphics</td>
+        </tr>
+        <tr>
+            <td>property/checkpoint</td> <td>todo</td> <td>6 graphics</td>
+        </tr>
+        <tr>
+            <td>property/laser</td> <td>todo</td> <td>10 graphics</td>
+        </tr>
+        <tr>
+            <td>property/laser emitter</td> <td>todo</td> <td>3 graphics</td>
+        </tr>
+        <tr>
+            <td>property/press</td> <td>todo</td> <td>3 graphics</td>
+        </tr>
+        <tr>
+            <td>property/slide</td> <td>todo</td> <td>5 graphics</td>
+        </tr>
+        <tr>
+            <td>property/wall</td> <td>todo</td> <td>15 graphics</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td>overall</td> <td>35 %</td> <td>34/97 graphics</td>
+        </tr>
+    <tfoot>
+</table>
