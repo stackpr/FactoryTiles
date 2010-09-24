@@ -26,10 +26,10 @@ For example, use following to generate images for 32x32, 64x64 and 128x128 tiles
 Dependencies
 ------------
 
-* Make - dependency-driven creation
-* GNU - basic folder and file operations
-* Inkscape - renders the SVGs into PNGs
-* markdown - renders README.md into README.html (optional)
+* `make` - dependency-driven creation
+* `GNU` - basic folder and file operations
+* `Inkscape` - renders the SVGs into PNGs
+* `markdown` - renders README.md into README.html (optional)
 
 Tilemodel
 =========
@@ -62,7 +62,7 @@ Robots
 Renderorder
 ===========
 
-The ascending order from background do foreground is as follows:
+The order from background do foreground is as follows:
 floor, checkpoint, slide, laser, wall, laser emitter, robot, press
 
 Status
@@ -76,16 +76,16 @@ Status
     </thead>
     <tbody>
         <tr>
-            <td>make framework</td> <td>done</td> <td></td>
+            <td>make framework</td> <td><b>done</b></td> <td></td>
         </tr>
         <tr>
             <td>robot</td> <td>todo</td> <td>8 graphics</td>
         </tr>
         <tr>
-            <td>floor/abyss</td> <td>done</td> <td>20 graphics</td>
+            <td>floor/abyss</td> <td><b>done</b></td> <td>20 graphics</td>
         </tr>
         <tr>
-            <td>floor/belt</td> <td>done</td> <td>14 graphics</td>
+            <td>floor/belt</td> <td><b>done</b></td> <td>14 graphics</td>
         </tr>
         <tr>
             <td>floor/repair</td> <td>todo</td> <td>2 graphics</td>
@@ -112,12 +112,14 @@ Status
             <td>property/slide</td> <td>todo</td> <td>5 graphics</td>
         </tr>
         <tr>
-            <td>property/wall</td> <td>todo</td> <td>15 graphics</td>
+            <td>property/wall</td> <td><i>partially</i></td> <td>11/15 graphics</td>
         </tr>
     </tbody>
     <tfoot>
         <tr>
-            <td>overall</td> <td>35 %</td> <td>34/97 graphics</td>
+            <td>overall</td> <td>46 %</td> <td>45/97 graphics</td>
         </tr>
     <tfoot>
 </table>
+
+Time needed to build: 55 seconds.
