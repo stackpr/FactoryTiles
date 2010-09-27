@@ -1,5 +1,5 @@
-sources := left forward right leftRight \
-	leftForward leftForwardRight forwardRight
+sources := left.svg forward.svg right.svg leftRight.svg \
+	leftForward.svg leftForwardRight.svg forwardRight.svg
 
 all: .64
 
@@ -13,7 +13,15 @@ all: .64
 	for f in $(sources); do mkdir -p ./48/; inkscape -z -e ./48/$$f.png -w 48 scalable/$$f.svg &> /dev/null; done
 
 .64:
-	for f in $(sources); do mkdir -p ./64/; inkscape -z -e ./64/$$f.png -w 64 scalable/$$f.svg &> /dev/null; done
+	mkdir -p ./64/;
+	for f in $(sources); \
+	do \
+		CURRENT_FILE = basename $$f svg; \
+		echo $$CURRENT_FILE; \
+		set currentSVG = $$CURRENT_FILE .svg; \
+		set currentPNG = $$CURRENT_FILE .png; \
+		#inkscape -z -e .png -w 64 scalable/$$f.svg \ # &> /dev/null; \
+	done
 
 .96:
 	for f in $(sources); do mkdir -p ./96/; inkscape -z -e ./96/$$f.png -w 96 scalable/$$f.svg &> /dev/null; done
