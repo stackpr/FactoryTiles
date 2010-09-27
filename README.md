@@ -140,7 +140,7 @@ Status
             <td>property/laser</td> <td><b>todo</b></td> <td>9 graphics</td>
         </tr>
         <tr>
-            <td>property/laser emitter</td> <td><b>todo</b></td> <td>3 graphics</td> <td>or would 49 be better?</td>
+            <td>property/laserEmitter</td> <td><b>todo</b></td> <td>3 graphics</td> <td>or would 49 be better?</td>
         </tr>
         <tr>
             <td>property/press</td> <td><b>todo</b></td> <td>3 graphics</td>
