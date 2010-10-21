@@ -134,13 +134,13 @@ Status
             <td>module/original</td> <td><b>todo</b></td> <td>9 graphics</td>
         </tr>
         <tr>
-            <td>property/checkpoint</td> <td><b>todo</b></td> <td>6 graphics</td>
+            <td>property/checkpoint</td> <td>done</td> <td>6 graphics</td>
         </tr>
         <tr>
-            <td>property/laser</td> <td><b>todo</b></td> <td>9 graphics</td>
+            <td>property/laser</td> <td><b>todo</b></td> <td>3 graphics</td> <td>or would 49 be better?</td>
         </tr>
         <tr>
-            <td>property/laserEmitter</td> <td><b>todo</b></td> <td>3 graphics</td> <td>or would 49 be better?</td>
+            <td>property/laserBeam</td> <td><b>todo</b></td> <td>9 graphics</td>
         </tr>
         <tr>
             <td>property/press</td> <td><b>todo</b></td> <td>3 graphics</td>
@@ -154,7 +154,7 @@ Status
     </tbody>
     <tfoot>
         <tr>
-            <td>overall</td> <td>59 %</td> <td>58/98 graphics</td>
+            <td>overall</td> <td>65 %</td> <td>64/98 graphics</td>
         </tr>
     <tfoot>
 </table>
