@@ -83,34 +83,34 @@ Status
     </thead>
     <tbody>
         <tr>
-            <td>rekursive make framework</td> <td>done</td> <td></td>
+            <td>recursive make framework</td> <td>done</td> <td></td>
         </tr>
         <tr>
             <td>iterative make framework</td> <td>done</td> <td></td>
         </tr>
         <tr>
-            <td>bot/Hammer_Bot</td> <td><b>todo</b></td> <td>1 graphic</td>
+            <td>bot/Hammer_Bot</td> <td>done</td> <td>1 graphic</td>
         </tr>
         <tr>
-            <td>bot/Hulk_X-90</td> <td><b>todo</b></td> <td>1 graphic</td>
+            <td>bot/Hulk_X-90</td> <td>done</td> <td>1 graphic</td>
         </tr>
         <tr>
-            <td>bot/Spin_Bot</td> <td><b>todo</b></td> <td>1 graphic</td>
+            <td>bot/Spin_Bot</td> <td>done</td> <td>1 graphic</td>
         </tr>
         <tr>
-            <td>bot/Squash_Bot</td> <td><b>todo</b></td> <td>1 graphic</td>
+            <td>bot/Squash_Bot</td> <td>done</td> <td>1 graphic</td>
         </tr>
         <tr>
-            <td>bot/Trundle_Bot</td> <td><b>todo</b></td> <td>1 graphic</td>
+            <td>bot/Trundle_Bot</td> <td>done</td> <td>1 graphic</td>
         </tr>
         <tr>
-            <td>bot/Twitch</td> <td><b>todo</b></td> <td>1 graphic</td>
+            <td>bot/Twitch</td> <td>done</td> <td>1 graphic</td>
         </tr>
         <tr>
-            <td>bot/Twonky</td> <td><b>todo</b></td> <td>1 graphic</td>
+            <td>bot/Twonky</td> <td>done</td> <td>1 graphic</td>
         </tr>
         <tr>
-            <td>bot/Zoom_Bot</td> <td><b>todo</b></td> <td>1 graphic</td>
+            <td>bot/Zoom_Bot</td> <td>done</td> <td>1 graphic</td>
         </tr>
         <tr>
             <td>floor/abyss</td> <td>done</td> <td>21 graphics</td>
@@ -154,12 +154,12 @@ Status
     </tbody>
     <tfoot>
         <tr>
-            <td>overall</td> <td>51 %</td> <td>50/98 graphics</td>
+            <td>overall</td> <td>59 %</td> <td>58/98 graphics</td>
         </tr>
     <tfoot>
 </table>
 
-Approx amount of time needed to build: 4 minutes / 2,5 GHz
+Approximate amount of time needed to build: 2 minutes / 2,5 GHz
 
 Complexity
 ----------
@@ -195,7 +195,7 @@ and anything of the following
 
 ).
 
-That gives us 64 + (32 + 8 + 16 + 16 + 16) + (1 + 28 + 28 + 8 + 8) * 7 * 10 * 49 * 2 * 8 * 16 = 1.164.952 variants per tile.
+This gives us 64 + (32 + 8 + 16 + 16 + 16) + (1 + 28 + 28 + 8 + 8) * 7 * 10 * 49 * 2 * 8 * 16 = 1.164.952 variants per tile.
 
 ### Variations for laserEmitters
 
