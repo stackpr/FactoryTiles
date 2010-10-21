@@ -137,7 +137,7 @@ Status
             <td>property/checkpoint</td> <td>done</td> <td>6 graphics</td>
         </tr>
         <tr>
-            <td>property/laser</td> <td><b>todo</b></td> <td>3 graphics</td> <td>or would 49 be better?</td>
+            <td>property/laser</td> <td>done</td> <td>3 graphics</td> <td>or would 49 be better?</td>
         </tr>
         <tr>
             <td>property/laserBeam</td> <td><b>todo</b></td> <td>9 graphics</td>
@@ -154,7 +154,7 @@ Status
     </tbody>
     <tfoot>
         <tr>
-            <td>overall</td> <td>65 %</td> <td>64/98 graphics</td>
+            <td>overall</td> <td>68 %</td> <td>67/98 graphics</td>
         </tr>
     <tfoot>
 </table>
