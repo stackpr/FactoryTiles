@@ -70,7 +70,7 @@ Order of Rendering
 ==================
 
 The order of rendering from background do foreground is as follows:
-floor, checkpoint, laser, wall, laser emitter, slide, robot, press
+floor, laser beam, wall, laser, slide, robot, press, checkpoint
 
 Status
 ======
@@ -89,28 +89,28 @@ Status
             <td>iterative make framework</td> <td>done</td> <td></td>
         </tr>
         <tr>
-            <td>bot/Hammer_Bot</td> <td>done</td> <td>1 graphic</td>
+            <td>robot/Hammer_Bot</td> <td>done</td> <td>1 graphic</td>
         </tr>
         <tr>
-            <td>bot/Hulk_X-90</td> <td>done</td> <td>1 graphic</td>
+            <td>robot/Hulk_X-90</td> <td>done</td> <td>1 graphic</td>
         </tr>
         <tr>
-            <td>bot/Spin_Bot</td> <td>done</td> <td>1 graphic</td>
+            <td>robot/Spin_Bot</td> <td>done</td> <td>1 graphic</td>
         </tr>
         <tr>
-            <td>bot/Squash_Bot</td> <td>done</td> <td>1 graphic</td>
+            <td>robot/Squash_Bot</td> <td>done</td> <td>1 graphic</td>
         </tr>
         <tr>
-            <td>bot/Trundle_Bot</td> <td>done</td> <td>1 graphic</td>
+            <td>robot/Trundle_Bot</td> <td>done</td> <td>1 graphic</td>
         </tr>
         <tr>
-            <td>bot/Twitch</td> <td>done</td> <td>1 graphic</td>
+            <td>robot/Twitch</td> <td>done</td> <td>1 graphic</td>
         </tr>
         <tr>
-            <td>bot/Twonky</td> <td>done</td> <td>1 graphic</td>
+            <td>robot/Twonky</td> <td>done</td> <td>1 graphic</td>
         </tr>
         <tr>
-            <td>bot/Zoom_Bot</td> <td>done</td> <td>1 graphic</td>
+            <td>robot/Zoom_Bot</td> <td>done</td> <td>1 graphic</td>
         </tr>
         <tr>
             <td>floor/abyss</td> <td>done</td> <td>21 graphics</td>
