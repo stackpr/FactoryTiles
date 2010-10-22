@@ -1,7 +1,7 @@
 SHELL = /bin/sh
 MAKE = /usr/bin/make
 
-firstlevel := bot floor module property
+firstlevel := robot floor module property
 secondlevel := $(foreach dir,$(firstlevel),$(wildcard $(dir)/*))
 scalables := $(foreach file,$(secondlevel),$(wildcard $(file)/scalable/*.svg))
 
