@@ -219,3 +219,32 @@ This gives us 64 + (32 + 8 + 16 + 16 + 16) + (1 + 28 + 28 + 8 + 8) * 7 * 10 * 49
 2000 2001 2002 2003 2100 2200 2300
 
 3000 3001 3002 3003 3100 3200 3300
+
+Layer Model
+-----------
+
+##Layer0: floor/
+floor/abyss/64/[abyss|arris[0000 … 1111]|bay|edge|nook|single|turn].png
+floor/concrete/64/default.png
+floor/conveyorBelt/64/[forward|forwardRight|left|leftForward|leftForwadRight|leftRight|right].png
+floor/expressBelt/64/[forward|forwardRight|left|leftForward|leftForwadRight|leftRight|right].png
+floor/repair/64/[1|2].png
+floor/turntable/64/[clockwise|counterclockwise].png
+
+##Layer1: property/laserBeam/
+property/laserBeam/64/[0by1|0by2|0by3|1by0|1by1|1by2|1by3|2by0|2by1|2by2|2by3|3by0|3by1|3by2|3by3].png
+
+##Layer2: property/wall/
+property/wall/64/[0001 … 1111].png
+
+##Layer3: property/laser/
+property/laser/64/[0001 … 3300].png (komplette Liste unter property/laser/validcombinations)
+
+##Layer4: property/slide/
+property/slide/64/[1|1and3and5|2|2and4|3].png
+
+##Layer5: property/press/
+property/press/64/[1and5|2and4|3].png
+
+##Layer6: property/checkpoint/
+property/checkpoint/64/[1…6].png
