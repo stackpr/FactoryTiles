@@ -17,6 +17,7 @@ Paradigms
 * The default rotation direction is clockwise, starting north.
 * All graphics are the full tile size.
 * Outlines are 1px wide at 64 px tile size.
+* Notation is x (east to west) first, then y (north to south).
 
 Notes on Building
 =================
@@ -137,10 +138,10 @@ Status
             <td>property/checkpoint</td> <td>done</td> <td>6 graphics</td>
         </tr>
         <tr>
-            <td>property/laser</td> <td>done</td> <td>3 graphics</td> <td>or would 49 be better?</td>
+            <td>property/laser</td> <td>done</td> <td>76 graphics</td>
         </tr>
         <tr>
-            <td>property/laserBeam</td> <td>done</td> <td>9 graphics</td>
+            <td>property/laserBeam</td> <td>done</td> <td>15 graphics</td>
         </tr>
         <tr>
             <td>property/press</td> <td><b>todo</b></td> <td>3 graphics</td>
@@ -154,7 +155,7 @@ Status
     </tbody>
     <tfoot>
         <tr>
-            <td>overall</td> <td>78 %</td> <td>76/98 graphics</td>
+            <td>overall</td> <td>88 %</td> <td>155/177 graphics</td>
         </tr>
     <tfoot>
 </table>
