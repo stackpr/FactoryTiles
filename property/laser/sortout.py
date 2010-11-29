@@ -18,11 +18,11 @@ with open('allcombinations') as infile:
         if line[0] == '3' and line[2] == '2': continue
         if line[0] == '3' and line[2] == '3': continue
 
-        if not line[0] == '0' and not line[1] == '0' and
+        if not line[0] == '0' and not line[1] == '0' and \
             not line[2] == '0' and not line[3] == '0':
             continue
 
-        if line[0] == '0' and line[1] == '0' and
+        if line[0] == '0' and line[1] == '0' and \
             line[2] == '0' and line[3] == '0':
             continue
 
@@ -35,7 +35,4 @@ with open('validcombinations') as validfilenames:
     for filename in validfilenames:
         filename = 'scalable/' + filename[:-1] + '.svg'
         print filename
-        try:
-            open(filename, 'r').close()
-        except:
-            open(filename, 'w').close()
+        open(filename, 'w').close()
