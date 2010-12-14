@@ -132,7 +132,7 @@ Status
             <td>floor/turntable</td> <td><b>todo</b></td> <td>2 graphics</td>
         </tr>
         <tr>
-            <td>module/original</td> <td><b>todo</b></td> <td>9 graphics</td>
+            <td>module/original</td> <td>done</td> <td>85 graphics</td>
         </tr>
         <tr>
             <td>property/checkpoint</td> <td>done</td> <td>6 graphics</td>
@@ -155,7 +155,7 @@ Status
     </tbody>
     <tfoot>
         <tr>
-            <td>overall</td> <td>88 %</td> <td>155/177 graphics</td>
+            <td>overall</td> <td>91 %</td> <td>229/251 graphics</td>
         </tr>
     <tfoot>
 </table>
@@ -188,42 +188,23 @@ or (
 and anything of the following
 
 * 0 to 1 checkpoint (6 types, 7 variants),
-* 0 to 1 laser (9 types, 10 variants),
-* 0 to 2 laserEmitters (non-opposing, 49 variants),
+* 0 to 1 laser (15 types, 16 variants),
+* 0 to 2 laserEmitters (non-opposing, 76 variants),
 * 0 to 1 press (2 variants),
 * 0 to 2 slides (non-opposing, 8 variants) and
 * 0 to 1 of the 15 walls (16 variants)
 
 ).
 
-This gives us 64 + (32 + 8 + 16 + 16 + 16) + (1 + 28 + 28 + 8 + 8) * 7 * 10 * 49 * 2 * 8 * 16 = 1.164.952 variants per tile.
-
-### Variations for laserEmitters
-
-0000 0001 0002 0003
-
-0010 0011 0012 0013
-
-0020 0021 0022 0023
-
-0030 0031 0032 0033
-
-0100 0110 0120 0130
-
-0200 0210 0220 0230
-
-0300 0310 0320 0330
-
-1000 1001 1002 1003 1100 1200 1300
-
-2000 2001 2002 2003 2100 2200 2300
-
-3000 3001 3002 3003 3100 3200 3300
+This gives us 64 + (32 + 8 + 16 + 16 + 16) + (1 + 28 + 28 + 8 + 8) * 7 * 16 * 76 * 2 * 8 * 16 = 159.072.408 variants per tile.
 
 Layer Model
 -----------
 
-##Layer0: floor/
+Just to draw the board you don't necessesarily need to understand the game's logic.
+So you can just get 7 twodimensional arrays of your viewport-size containing links to the corresponding graphics as follows:
+
+#Layer0: floor/
 floor/abyss/64/[abyss|arris[0000 … 1111]|bay|edge|nook|single|turn].png
 floor/concrete/64/default.png
 floor/conveyorBelt/64/[forward|forwardRight|left|leftForward|leftForwadRight|leftRight|right].png
@@ -231,20 +212,20 @@ floor/expressBelt/64/[forward|forwardRight|left|leftForward|leftForwadRight|left
 floor/repair/64/[1|2].png
 floor/turntable/64/[clockwise|counterclockwise].png
 
-##Layer1: property/laserBeam/
+#Layer1: property/laserBeam/
 property/laserBeam/64/[0by1|0by2|0by3|1by0|1by1|1by2|1by3|2by0|2by1|2by2|2by3|3by0|3by1|3by2|3by3].png
 
-##Layer2: property/wall/
+#Layer2: property/wall/
 property/wall/64/[0001 … 1111].png
 
-##Layer3: property/laser/
+#Layer3: property/laser/
 property/laser/64/[0001 … 3300].png (komplette Liste unter property/laser/validcombinations)
 
-##Layer4: property/slide/
+#Layer4: property/slide/
 property/slide/64/[1|1and3and5|2|2and4|3].png
 
-##Layer5: property/press/
+#Layer5: property/press/
 property/press/64/[1and5|2and4|3].png
 
-##Layer6: property/checkpoint/
+#Layer6: property/checkpoint/
 property/checkpoint/64/[1…6].png
