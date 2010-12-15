@@ -71,7 +71,7 @@ Order of Rendering
 ==================
 
 The order of rendering from background do foreground is as follows:
-floor, laser beam, wall, laser, slide, robot, press, checkpoint
+floor, laser beam, wall, laser, slide, robot, checkpoint, press
 
 Status
 ======
@@ -117,7 +117,7 @@ Status
             <td>floor/abyss</td> <td>done</td> <td>21 graphics</td>
         </tr>
         <tr>
-            <td>floor/concrete</td> <td><b>todo<b></td> <td>1 graphic</td>
+            <td>floor/concrete</td> <td>done</td> <td>12 graphics</td>
         </tr>
         <tr>
             <td>floor/conveyorBelt</td> <td>done</td> <td>7 graphics</td>
@@ -144,7 +144,7 @@ Status
             <td>property/laserBeam</td> <td>done</td> <td>15 graphics</td>
         </tr>
         <tr>
-            <td>property/press</td> <td><b>todo</b></td> <td>3 graphics</td>
+            <td>property/press</td> <td>done</td> <td>3 graphics</td>
         </tr>
         <tr>
             <td>property/slide</td> <td><b>todo</b></td> <td>5 graphics</td>
@@ -155,7 +155,7 @@ Status
     </tbody>
     <tfoot>
         <tr>
-            <td>overall</td> <td>91 %</td> <td>229/251 graphics</td>
+            <td>overall</td> <td>93 %</td> <td>244/262 graphics</td>
         </tr>
     <tfoot>
 </table>
