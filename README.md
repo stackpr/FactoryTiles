@@ -337,3 +337,8 @@ So you can just get 7 two dimensional arrays containing links to the correspondi
 </table>
 URLs form as follows:
     <FactoryTilesBase> + "/" + <Type> + "/" + <Resolution> + "/" + <Tile> + ".png"
+
+##Encoding
+The most trivial method for internal encoding would be to omit FactoryTile's base, the floor- or property-prefix and the trailing ".png".
+The longest String would be 'conveyorBelt/64/1000000001', adding up to 22 characters per layer, 176 characters per tile, 25344 characters or 50688 Bytes per map.
+That's the very worst case. Expect to have mostly empty layers per field.
