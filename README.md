@@ -57,8 +57,8 @@ Properties - Stuff associated with a tile
 * checkpoint - marks the route
 * laser - damages robots occassionally (rotate as needed)
 * laserEmitter - emits laser (ternary naming is for a reason)
-* press - destructs robots occassionally (embedded into walls)
-* slide - moves robots occassionally
+* crusher - destructs robots occassionally (embedded into walls)
+* pusher - moves robots occassionally
 * wall - keeps robots from crossing it (binary naming is for a reason)
 
 Robots - The Counters of RoboRally
@@ -71,7 +71,7 @@ Order of Rendering
 ==================
 
 The order of rendering from background do foreground is as follows:
-floor, laser beam, wall, laser, slide, robot, checkpoint, press
+floor, laser beam, wall, laser, pusher, robot, checkpoint, crusher
 
 Status
 ======
@@ -114,16 +114,16 @@ Status
             <td>robot/Zoom_Bot</td> <td>done</td> <td>1 graphic</td>
         </tr>
         <tr>
-            <td>floor/abyss</td> <td>done</td> <td>21 graphics</td>
+            <td>floor/abyss</td> <td>done</td> <td>47 graphics</td>
         </tr>
         <tr>
             <td>floor/concrete</td> <td>done</td> <td>12 graphics</td>
         </tr>
         <tr>
-            <td>floor/conveyorBelt</td> <td>done</td> <td>7 graphics</td>
+            <td>floor/conveyorBelt</td> <td>done</td> <td>28 graphics</td>
         </tr>
         <tr>
-            <td>floor/expressBelt</td> <td>done</td> <td>7 graphics</td>
+            <td>floor/expressBelt</td> <td>done</td> <td>28 graphics</td>
         </tr>
         <tr>
             <td>floor/repair</td> <td><b>todo</b></td> <td>2 graphics</td>
@@ -144,10 +144,10 @@ Status
             <td>property/laserBeam</td> <td>done</td> <td>15 graphics</td>
         </tr>
         <tr>
-            <td>property/press</td> <td>done</td> <td>3 graphics</td>
+            <td>property/crusher</td> <td>done</td> <td>3 graphics</td>
         </tr>
         <tr>
-            <td>property/slide</td> <td><b>todo</b></td> <td>5 graphics</td>
+            <td>property/pusher</td> <td><b>todo</b></td> <td>5 graphics</td>
         </tr>
         <tr>
             <td>property/wall</td> <td>done</td> <td>15 graphics</td>
@@ -155,7 +155,7 @@ Status
     </tbody>
     <tfoot>
         <tr>
-            <td>overall</td> <td>93 %</td> <td>244/262 graphics</td>
+            <td>overall</td> <td>97 %</td> <td>323/332 graphics</td>
         </tr>
     <tfoot>
 </table>
@@ -190,42 +190,150 @@ and anything of the following
 * 0 to 1 checkpoint (6 types, 7 variants),
 * 0 to 1 laser (15 types, 16 variants),
 * 0 to 2 laserEmitters (non-opposing, 76 variants),
-* 0 to 1 press (2 variants),
-* 0 to 2 slides (non-opposing, 8 variants) and
+* 0 to 1 crusher (2 variants),
+* 0 to 2 pushers (non-opposing, 8 variants) and
 * 0 to 1 of the 15 walls (16 variants)
 
 ).
 
 This gives us 64 + (32 + 8 + 16 + 16 + 16) + (1 + 28 + 28 + 8 + 8) * 7 * 16 * 76 * 2 * 8 * 16 = 159.072.408 variants per tile.
 
-Layer Model
------------
+Naming/Notation
+---------------
 
-Just to draw the board you don't necessesarily need to understand the game's logic.
-So you can just get 7 twodimensional arrays of your viewport-size containing links to the corresponding graphics as follows:
+To draw the board you don't necessesarily need to understand the game's logic.
+So you can just get 7 two dimensional arrays containing links to the corresponding graphics as follows:
 
-#Layer0: floor/
-floor/abyss/64/[abyss|arris[0000 … 1111]|bay|edge|nook|single|turn].png
-floor/concrete/64/default.png
-floor/conveyorBelt/64/[forward|forwardRight|left|leftForward|leftForwadRight|leftRight|right].png
-floor/expressBelt/64/[forward|forwardRight|left|leftForward|leftForwadRight|leftRight|right].png
-floor/repair/64/[1|2].png
-floor/turntable/64/[clockwise|counterclockwise].png
 
-#Layer1: property/laserBeam/
-property/laserBeam/64/[0by1|0by2|0by3|1by0|1by1|1by2|1by3|2by0|2by1|2by2|2by3|3by0|3by1|3by2|3by3].png
+<table>
+    <thead>
+        <tr>
+            <td>Layer</td> <td>Type</td> <td>Tile</td> <td>Meaning</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>0</td>
+            <td>floor/abyss</td>
+            <td>[00000000 &hellip; 11111111]</td>
+            <td>even bits &rarr; vertices, odd bits &rarr; edges</td>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>floor/concrete</td>
+            <td>[0 &hellip; 12]</td>
+            <td>enumerated</td>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>floor/conveyorBelt</td>
+            <td>[0000 &hellip; 1111][0000 &hellip; 1000]</td>
+            <td>first 4 bits &rarr; origin (1-3hot), second 4 bits &rarr; destination (1hot)</td>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>floor/expressBelt</td>
+            <td>[0000 &hellip; 1111][0000 &hellip; 1000]</td>
+            <td>first 4 bits &rarr; origin (1-3hot), second 4 bits &rarr; destination (1hot)</td>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>floor/repair</td>
+            <td>[1 &hellip; 2]</td>
+            <td>1 &rarr; repairs 1 health point, 2 &rarr; repairs 2 health points</td>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>floor/turntable</td>
+            <td>[0 &hellip; 1]</td>
+            <td>0 &rarr; clockwise, 1 &rarr; counter-cockwise</td>
+        </tr>
 
-#Layer2: property/wall/
-property/wall/64/[0001 … 1111].png
-
-#Layer3: property/laser/
-property/laser/64/[0001 … 3300].png (komplette Liste unter property/laser/validcombinations)
-
-#Layer4: property/slide/
-property/slide/64/[1|1and3and5|2|2and4|3].png
-
-#Layer5: property/press/
-property/press/64/[1and5|2and4|3].png
-
-#Layer6: property/checkpoint/
-property/checkpoint/64/[1…6].png
+        <tr>
+            <td>1</td>
+            <td>property/laserBeam</td>
+            <td>[0 &hellip; 3][0 &hellip; 3]</td>
+            <td>first digit &rarr; count north to south, second digit &rarr; count east to west</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>property/wall</td>
+            <td>[0000 &hellip; 1111]</td>
+            <td>each digit marks whether there is a wall</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>property/pusher</td>
+            <td>[1, 2, 3, 24, 135]</td>
+            <td>each digit marks a phase in that the pusher is active</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>robot/Hammer_Bot</td>
+            <td>0</td>
+            <td>Each robot has its own folder.</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>robot/Hulk_X-90</td>
+            <td>0</td>
+            <td>Each robot has its own folder.</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>robot/Spin_Bot</td>
+            <td>0</td>
+            <td>Each robot has its own folder.</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>robot/Squash_Bot</td>
+            <td>0</td>
+            <td>Each robot has its own folder.</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>robot/Trundle_Bot</td>
+            <td>0</td>
+            <td>Each robot has its own folder.</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>robot/Twitch</td>
+            <td>0</td>
+            <td>Each robot has its own folder.</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>robot/Twonky</td>
+            <td>0</td>
+            <td>Each robot has its own folder.</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>robot/Zoom_Bot</td>
+            <td>0</td>
+            <td>Each robot has its own folder.</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>property/laser</td>
+            <td>[0000 &hellip; 3300]</td>
+            <td>each digit &rarr; laser count on wall</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>property/checkpoint</td>
+            <td>[0 &hellip; 6]</td>
+            <td>enumerated</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>property/crusher</td>
+            <td>[3, 15, 24]</td>
+            <td>each digit marks a phase in that the crusher is active</td>
+        </tr>
+    </tbody>
+</table>
+URLs form as follows:
+    &lt;FactoryTilesBase&gt; + "/" + &lt;Type&gt; + "/" + &lt;Resolution&gt; + "/" + &lt;Tile&gt; + ".png"
