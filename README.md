@@ -268,6 +268,12 @@ So you can just get 7 two dimensional arrays containing links to the correspondi
             <td>each digit marks a phase in that the pusher is active</td>
         </tr>
         <tr>
+            <td>4</td>
+            <td>property/laser</td>
+            <td>[0000 &hellip; 3300]</td>
+            <td>each digit &rarr; laser count on wall</td>
+        </tr>
+        <tr>
             <td>5</td>
             <td>robot/Hammer_Bot</td>
             <td>0</td>
@@ -314,12 +320,6 @@ So you can just get 7 two dimensional arrays containing links to the correspondi
             <td>robot/Zoom_Bot</td>
             <td>0</td>
             <td>Each robot has its own folder.</td>
-        </tr>
-        <tr>
-            <td>4</td>
-            <td>property/laser</td>
-            <td>[0000 &hellip; 3300]</td>
-            <td>each digit &rarr; laser count on wall</td>
         </tr>
         <tr>
             <td>6</td>
