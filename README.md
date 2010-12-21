@@ -336,4 +336,4 @@ So you can just get 7 two dimensional arrays containing links to the correspondi
     </tbody>
 </table>
 URLs form as follows:
-    &lt;FactoryTilesBase&gt; + "/" + &lt;Type&gt; + "/" + &lt;Resolution&gt; + "/" + &lt;Tile&gt; + ".png"
+    <FactoryTilesBase> + "/" + <Type> + "/" + <Resolution> + "/" + <Tile> + ".png"
