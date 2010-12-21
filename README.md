@@ -259,13 +259,13 @@ So you can just get 7 two dimensional arrays containing links to the correspondi
             <td>2</td>
             <td>property/wall</td>
             <td>[0000 &hellip; 1111]</td>
-            <td>each digit %&arr; whether there is a wall</td>
+            <td>each digit &rarr; whether there is a wall</td>
         </tr>
         <tr>
             <td>3</td>
             <td>property/pusher</td>
             <td>[1, 2, 3, 24, 135]</td>
-            <td>each digit %&arr; a phase in that the pusher is active</td>
+            <td>each digit &rarr; a phase in that the pusher is active</td>
         </tr>
         <tr>
             <td>4</td>
