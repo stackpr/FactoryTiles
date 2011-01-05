@@ -126,7 +126,7 @@ Status
             <td>floor/expressBelt</td> <td>done</td> <td>28 graphics</td>
         </tr>
         <tr>
-            <td>floor/repair</td> <td><b>todo</b></td> <td>2 graphics</td>
+            <td>floor/repair</td> <td>done</td> <td>2 graphics</td>
         </tr>
         <tr>
             <td>floor/turntable</td> <td><b>todo</b></td> <td>2 graphics</td>
@@ -155,7 +155,7 @@ Status
     </tbody>
     <tfoot>
         <tr>
-            <td>overall</td> <td>97 %</td> <td>323/332 graphics</td>
+            <td>overall</td> <td>98 %</td> <td>325/332 graphics</td>
         </tr>
     <tfoot>
 </table>
