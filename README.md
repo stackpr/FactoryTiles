@@ -129,7 +129,7 @@ Status
             <td>floor/repair</td> <td>done</td> <td>2 graphics</td>
         </tr>
         <tr>
-            <td>floor/turntable</td> <td><b>todo</b></td> <td>2 graphics</td>
+            <td>floor/turntable</td> <td>done</td> <td>2 graphics</td>
         </tr>
         <tr>
             <td>module/original</td> <td>done</td> <td>85 graphics</td>
@@ -155,7 +155,7 @@ Status
     </tbody>
     <tfoot>
         <tr>
-            <td>overall</td> <td>98 %</td> <td>325/332 graphics</td>
+            <td>overall</td> <td>98 %</td> <td>327/332 graphics</td>
         </tr>
     <tfoot>
 </table>
